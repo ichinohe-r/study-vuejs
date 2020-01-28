@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-html</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p>{{ vueText }}</p>
+    <p v-text="vueText"></p>
+    <p v-html="vueText"></p>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            vueText: '<input type="button" value="画面を閉じる" onclick="window.close()">'
+        }
+    })
+</script>
+</body>
+</html>
