@@ -1,10 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>色々な型を表示してみる</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.js"></script>
 </head>
 <body>
-$END$
+<div id="app">
+    <p>{{ typeNumber }}</p>
+    <p>{{ typeBoolean }}</p>
+    <p>{{ typeString }}</p>
+    <p>{{ typeUndefined }}</p>
+    <p>{{ typeNull }}</p>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            typeNumber: 1234567890,
+            typeBoolean: true,
+            typeString: '文字列',
+            typeUndefined: undefined,
+            typeNull: null
+        }
+    })
+</script>
 </body>
 </html>
